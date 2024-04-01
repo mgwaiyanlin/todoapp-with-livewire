@@ -14,6 +14,10 @@ class TodoList extends Component
     public $name;
     public $search;
 
+    public function delete($id) {
+        Todo::find($id)->delete();
+    }
+
     public function create() {
         $validatedData = $this->validate([
             'name' => 'required|min:3|max:50'

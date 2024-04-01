@@ -5,8 +5,8 @@
         "><small>{{ $todo->created_at }}</small></p>
     </div>
 
-    <div class="col-2">
-        <a href="" class="text-danger me-3"><i class="fa-solid fa-trash"></i></a>
-        <a href="" class="text-success"><i class="fa-solid fa-pen-to-square"></i></a>
+    <div class="col-2 d-flex">
+        <button wire:click="delete({{ $todo->id }})" class="text-danger btn"><i class="fa-solid fa-trash"></i></button>
+        <button class="text-success btn"><i class="fa-solid fa-pen-to-square"></i></button>
     </div>
 </div>

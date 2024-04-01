@@ -11,6 +11,6 @@
             <p><small class="text-success">{{ session('success') }}</small></p>
         @endif
 
-        <button wire:click.prevent="create" class="btn btn-primary mt-5">Add <i class="fa-solid fa-plus"></i></button>
+        <button wire:click.prevent="create" class="btn btn-primary mt-4">Add <i class="fa-solid fa-plus"></i></button>
     </form>
 </div>
