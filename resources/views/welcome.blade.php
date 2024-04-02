@@ -31,10 +31,7 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a href="#" class="nav-link text-white">Home</a>
-                        </li>
-                        <li class="navbar-item">
-                            <a href="" class="nav-link text-white">TodoList</a>
+                            <a href="/" class="nav-link text-white">Home</a>
                         </li>
                         <li class="navbar-item">
                             <a href="" class="nav-link text-white">About</a>
