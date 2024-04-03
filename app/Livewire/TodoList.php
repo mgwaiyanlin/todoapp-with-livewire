@@ -13,6 +13,27 @@ class TodoList extends Component
 
     public $name;
     public $search;
+    public $editingID;
+    public $editingName;
+
+    public function update() {
+        $this->validate(['editingName' => 'required|min:3|max:50']);
+
+        Todo::find($this->editingID)->update([
+            'name' => $this->editingName
+        ]);
+
+        $this->cancelEdit();
+    }
+
+    public function cancelEdit() {
+        $this->reset('editingID', 'editingName');
+    }
+
+    public function edit($id) {
+        $this->editingID = $id;
+        $this->editingName = Todo::find($id)->name;
+    }
 
     public function toggle($id) {
         $todo = Todo::find($id);
